@@ -5,8 +5,10 @@ if(!($_ = shift)=~/\w/){ print "please input a file\n";exit();}
 for $i(0 .. $#lines){
 	$_=$lines[$i];chomp;
 	$x="curl -sL -D - $_ -o /dev/null";
-	$o=`$x | head -n 1`;
-	if( !($o=~/200/)){
-		print $i+1 . ": $_ <> !200 found \n";
+	$o=`$x |grep HTTP | tail -n 1`;
+	if( ($o=~/200/g)){
 		}
+    else{
+        print $i+1 . ": $_ <> !200 found \n";
+    }
 	}

@@ -1,14 +1,51 @@
 #!/usr/bin/perl
+use feature "say";
 
-shift;`curl$_`;
-print;
+say "get me a url" and exit, if !($domain=shift);
 
+@lines=`curl -L $domain`;
 
+# @lol;
 
-# for file in $(curl -s http://www.ime.usp.br/~coelho/mac0122-2013/ep2/esqueleto/ |
-#                   grep href |
-#                   sed 's/.*href="//' |
-#                   sed 's/".*//' |
-#                   grep '^[a-zA-Z].*'); do
-#     curl -s -O http://www.ime.usp.br/~coelho/mac0122-2013/ep2/esqueleto/$file
-# done
+foreach(@lines) {
+  @links=(@links,$1), if(/(<\s*link.*?\>)/g);
+  @links=(@links,$1), if(/(src\s*=\s*\".*?\")/g);
+}
+
+say "@links";
+
+foreach $str (@links) {
+    @words = qw/dns-prefetch prefetch canonical/;
+  if ( ! grep { $str =~ /$_/ } @words) {
+    @new=(@new,$str);
+  }
+}
+
+$"="\n";
+print "@new";
+
+foreach $x (@new) {
+      if($x=~/src/g){
+        if($x=~/\"(.*)\"/g){
+          @lol=(@lol,$1);
+        }
+      }
+      if (/link/) {
+        $x=$_;
+      if ($x=~/href\s*=\s*[\"\'](.*?)[\"\']/g) {
+       @lol=(@lol,$1);
+      }
+      # say $_;
+      }
+}
+
+foreach (@lol) {
+  if (/\/\//) {
+    s/^\/\///;
+    # say;
+    `curl -L $_`;
+  }
+  else{
+    `curl -L "$domain$_"`
+  }
+}

@@ -3,7 +3,7 @@
 if(!($_ = shift)=~/\w/){ print "please input a file\n";exit();}
 @lines = `cat $_`;
 for $i(0 .. $#lines){
-	$_=$lines[$i];chomp;/\w/g;
+	$_=$lines[$i];chomp;/(\w)/g;
 	if(defined($1)){
 		continue;
 	}

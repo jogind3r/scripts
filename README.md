@@ -1,4 +1,5 @@
 <b>url_validator</b>
+
 usage:
 download the code and run as 
 $ url_val.py < your_list_file.txt

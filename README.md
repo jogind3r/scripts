@@ -1,25 +1,25 @@
-<b>url_validator</b>
+<b>URL_Status_Checker</b>
 
 usage:
 download the code and run as 
-$ url_val.py < your_list_file.txt
+$ url_status.py < your_list_file.txt
 
 or
 
-$ cat your_list_file.txt | url_val.py
+$ cat your_list_file.txt | url_status.py
 
 or 
 
-$ some_stuff | url_val.py
+$ some_stuff | url_status.py
 
 !!input contains urls ,one on each line
 
 or run as
 
-python -c "$(curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/url_val.py)" < your_list_file.txt
+python -c "$(curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/url_satus.py)" < your_list_file.txt
 
 --------------
-<b>url_validator_not200</b>
+<b>URL_Validator_Not200</b>
 
 usage:
 download the code and run as url_validator_not200.pl your_list_file.txt

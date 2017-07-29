@@ -22,7 +22,9 @@ initial=threading.activeCount()
 
 for url in sys.stdin:
     myThread(url.strip()).start()
-    while threading.activeCount() > 100 + initial:
+    # do not increase the max number of threads more tha 99
+    # while threading.activeCount() > 50: ; 50 is max number of threads
+    while threading.activeCount() > 50:
         time.sleep(1)
 while threading.activeCount() > initial:
     time.sleep(1)

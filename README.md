@@ -16,7 +16,7 @@ $ some_stuff | url_status.py
 
 or run as
 
-python -c "$(curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/url_satus.py)" < your_list_file.txt
+python -c "$(curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/url_status.py)" < your_list_file.txt
 
 --------------
 <b>URL_Validator_Not200</b>

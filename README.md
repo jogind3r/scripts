@@ -3,9 +3,13 @@
 usage:
 download the code and run as 
 $ url_val.py < your_list_file.txt
+
 or
+
 $ cat your_list_file.txt | url_val.py
+
 or 
+
 $ some_stuff | url_val.py
 
 !!input contains urls ,one on each line

@@ -4,3 +4,4 @@ https://www.apple.com
 https://www.microsoft.com
 https://www.apple.com/images
 https://github.com/url_does_not_exist
+https://img1.wsimg.com/Sitecore/E/

@@ -21,6 +21,8 @@ print "working..."
 initial=threading.activeCount()
 
 for url in sys.stdin:
+    if url == '' or url == '\n':
+        continue
     myThread(url.strip()).start()
     # do not increase the max number of threads more tha 99
     # while threading.activeCount() > 50: ; 50 is max number of threads

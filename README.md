@@ -1,7 +1,7 @@
 # URL_Status_Checker
 
 this script takes URLs as input from std input and gives out the status of every URL.
-
+Doenaload it [here](https://raw.githubusercontent.com/jogind3r/scripts/master/)
 
 ## usage:
 download the code and run as 
@@ -34,9 +34,11 @@ curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/sample.txt | p
 
 output:
 
-working...
+
 
 ```
+working...
+
 403:https://img1.wsimg.com/Sitecore/E/
 
 200:https://www.apple.com
@@ -51,5 +53,3 @@ working...
 
 200:https://apple.com
 ```
-
---------------

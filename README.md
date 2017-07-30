@@ -1,7 +1,7 @@
 # URL_Status_Checker
 
 this script takes URLs as input from std input and gives out the status of every URL.
-Doenaload it [here](https://raw.githubusercontent.com/jogind3r/scripts/master/)
+Download it [here](https://raw.githubusercontent.com/jogind3r/scripts/master/)
 
 ## usage:
 download the code and run as 

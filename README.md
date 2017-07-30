@@ -18,6 +18,10 @@ or run as
 
 python -c "$(curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/url_status.py)" < your_list_file.txt
 
+test:
+
+curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/sample.txt | python -c "$(curl -s https://raw.githubusercontent.com/jogind3r/scripts/master/url_status.py)"
+
 --------------
 <b>URL_Validator_Not200</b>
 
